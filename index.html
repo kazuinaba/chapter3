@@ -94,16 +94,21 @@
         $target.find('.stars').text(fortuneResults[i][rand]['stars']);
         $target.find('.stars').text(fortuneResults[i][rand]['detail']);
         $('.result').fadeIn();
-
-
+        $(this).toggleClass('js-fortune-restart');
+        $(this).toggleClass('js-fortune-start');
+        $(this).text("もう一度占う！");
 
       }
+
     });
 
-    $(function () {
-      $('.yy').click(function() {
-      $('.yy').text('もう一度占う');
-      });
+    $(document).on('click', '.js-fortune-restart', function() {
+    $('.result').fadeOut();
+
+    $(this).toggleClass('js-fortune-restart');
+    $(this).toggleClass('js-fortune-start');
+
+    $(this).text("運勢を占う！");
     });
 
     </script>
