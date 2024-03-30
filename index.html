@@ -14,7 +14,7 @@
       <h1>- おみくじアプリ -</h1>
       <h2>今日のあなたの運勢は・・・</h2>
       <button class="start-button js-fortune-start" type="button">
-        運勢を占う！
+        <span class="yy">運勢を占う！</span><span class="zz"></span>
       </button>
     </div>
     <div class="result">
@@ -93,8 +93,19 @@
 
         $target.find('.stars').text(fortuneResults[i][rand]['stars']);
         $target.find('.stars').text(fortuneResults[i][rand]['detail']);
+        $('.result').fadeIn();
+
+
+
       }
     });
+
+    $(function () {
+      $('.yy').click(function() {
+      $('.yy').text('もう一度占う');
+      });
+    });
+
     </script>
   </body>
 </html>
