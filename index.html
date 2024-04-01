@@ -92,7 +92,7 @@
         const $target = $('.' + i);
 
         $target.find('.stars').text(fortuneResults[i][rand]['stars']);
-        $target.find('.stars').text(fortuneResults[i][rand]['detail']);
+        $target.find('.detail').text(fortuneResults[i][rand]['detail']);
         $('.result').fadeIn();
         $(this).toggleClass('js-fortune-restart');
         $(this).toggleClass('js-fortune-start');
